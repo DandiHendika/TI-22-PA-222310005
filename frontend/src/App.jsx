@@ -15,7 +15,7 @@ function App() {
   const fetchUserProfile = async (currentToken) => {
     if (!currentToken) return;
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/user/profile', {
+      const response = await fetch('http://localhost:5000/api/user/profile', {
         headers: { 'Authorization': `Bearer ${currentToken}` }
       });
       if (!response.ok) throw new Error('Gagal mengambil profil');
